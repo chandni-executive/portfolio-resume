@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chandni Sharma | Product & Agentic AI Leadership</title>
+  <meta name="description" content="Chandni Sharma — Executive level product & solutions leader and hands-on builder in Agentic AI, cloud platforms, and enterprise architecture. Ex-Google. Portfolio of products and work." />
+
+  <!-- Optional: Social cards -->
+  <meta property="og:title" content="Chandni Sharma | Product & Agentic AI Leadership" />
+  <meta property="og:description" content="Executive level product & solutions leader and hands-on builder in Agentic AI, cloud platforms, and enterprise architecture." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root{
+      --bg-primary:#0a0e27;
+      --bg-secondary:#141937;
+      --bg-card:#1a1f3a;
+      --text-primary:#ffffff;
+      --text-secondary:#a8b2d1;
+      --accent-primary:#00d4ff;
+      --accent-secondary:#7c3aed;
+      --accent-success:#10b981;
+      --border:#2d3655;
+      --shadow: 0 14px 40px rgba(0,0,0,.28);
+    }
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
+      background:var(--bg-primary);
+      color:var(--text-primary);
+      line-height:1.6;
+    }
+
+    .container{ max-width: 1150px; margin:0 auto; padding:0 1.5rem; }
+
+    /* Nav */
+    nav{
+      background: rgba(10, 14, 39, 0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding: 1rem 1.5rem;
+      gap: 1rem;
+    }
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+    }
+    .brand .name{
+      font-size:1.25rem;
+      font-weight:800;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip:text;
+    }
+    .brand .role{
+      font-size:.9rem;
+      color: var(--text-secondary);
+    }
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav a{
+      color: var(--text-secondary);
+      text-decoration:none;
+      font-weight:600;
+      transition: color .25s ease;
+    }
+    nav a:hover{ color: var(--accent-primary); }
+
+    /* Hero */
+    header.hero{
+      padding: 4.5rem 0 2.5rem;
+      text-align:center;
+    }
+    .tagline{
+      display:inline-flex;
+      gap:.5rem;
+      align-items:center;
+      padding:.35rem .8rem;
+      border:1px solid rgba(0,212,255,.3);
+      border-radius:999px;
+      background: rgba(0,212,255,.08);
+      color: var(--accent-primary);
+      font-weight:700;
+      font-size:.9rem;
+      margin-bottom: 1rem;
+    }
+    .hero h1{
+      font-size: 3rem;
+      line-height: 1.15;
+      margin-bottom: .9rem;
+      letter-spacing: -0.02em;
+    }
+    .hero p{
+      max-width: 900px;
+      margin: 0 auto 1.5rem;
+      color: var(--text-secondary);
+      font-size: 1.06rem;
+    }
+
+    .cta-row{
+      display:flex;
+      justify-content:center;
+      gap:.75rem;
+      flex-wrap:wrap;
+      margin-top: 1.25rem;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:.85rem 1.1rem;
+      border-radius: 10px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      cursor:pointer;
+    }
+    .btn:hover{ transform: translateY(-2px); border-color: var(--accent-primary); }
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      box-shadow: 0 14px 35px rgba(0,212,255,.18);
+    }
+    .btn.primary:hover{ box-shadow: 0 18px 55px rgba(0,212,255,.28); }
+
+    /* Sections */
+    section{ padding: 2.75rem 0; }
+    .section-header{
+      text-align:left;
+      margin-bottom: 1.25rem;
+    }
+    .section-header h2{
+      font-size: 1.8rem;
+      margin-bottom: .35rem;
+    }
+    .section-header p{
+      color: var(--text-secondary);
+      max-width: 900px;
+    }
+
+    /* Cards / grid */
+    .grid{
+      display:grid;
+      gap: 1.2rem;
+    }
+    .grid.cols-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.cols-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card{
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .card h3{
+      font-size: 1.15rem;
+      margin-bottom: .5rem;
+    }
+    .muted{ color: var(--text-secondary); }
+
+    /* Skills */
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      margin-top: .6rem;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding: .35rem .65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,212,255,.26);
+      background: rgba(0,212,255,.07);
+      color: var(--text-primary);
+      font-size: .85rem;
+      white-space: nowrap;
+    }
+    .pill.alt{
+      border: 1px solid rgba(124,58,237,.35);
+      background: rgba(124,58,237,.10);
+    }
+
+    /* Timeline */
+    .role{
+      display:flex;
+      flex-direction:column;
+      gap:.35rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(45,54,85,.7);
+      margin-bottom: 1rem;
+    }
+    .role:last-child{ border-bottom:none; margin-bottom:0; padding-bottom:0; }
+    .role-head{
+      display:flex;
+      justify-content:space-between;
+      gap: 1rem;
+      flex-wrap:wrap;
+      align-items: baseline;
+    }
+    .role-title{
+      font-weight:800;
+      font-size: 1.05rem;
+    }
+    .role-meta{
+      color: var(--text-secondary);
+      font-weight:700;
+      font-size: .95rem;
+    }
+    .bullets{
+      margin-left: 1.05rem;
+      color: var(--text-secondary);
+    }
+    .bullets li{ margin: .25rem 0; }
+
+    /* Product blocks */
+    .product{
+      border: 1px solid rgba(0,212,255,.18);
+      background: linear-gradient(135deg, rgba(0,212,255,.07), rgba(124,58,237,.07));
+    }
+    .product .label{
+      display:inline-block;
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color: var(--accent-primary);
+      margin-bottom:.45rem;
+    }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid var(--border);
+      background: var(--bg-secondary);
+      padding: 2.5rem 0;
+      margin-top: 2rem;
+    }
+    footer .container{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap: 1.25rem;
+      flex-wrap:wrap;
+    }
+    .foot-left p{ color: var(--text-secondary); margin-top: .4rem; }
+    .foot-right{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:.6rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 860px){
+      .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+      .hero h1{ font-size: 2.25rem; }
+      nav ul{ display:none; }
+      .foot-right{ align-items:flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="brand">
+        <div class="name">Chandni Sharma</div>
+        <div class="role">Head of Cloud Products • Product Management Leadership</div>
+      </div>
+
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="tagline">Product & Agentic AI Leadership</div>
+      <h1>Executive level leader + hands-on builder<br/>for enterprise AI systems & cloud platforms</h1>
+      <p>
+        I specialize in product management, systems design, enterprise architecture, and product lifecycle execution.
+        Previously led large-scale solutions and product programs at Google with billions in revenue impact and 100+ direct reports.
+        Building production-ready products in multi-agent, RAG, workflow automation, and architecture generation with explicit targets for accuracy and unit economics.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#products">🧩 Products & Builds</a>
+        <a class="btn" href="https://linkedin.com/in/chansai" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+        <a class="btn" href="https://github.com/chandni-executive" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <p>Functional leadership strengths and technical depth for building and scaling enterprise AI products.</p>
+        </div>
+
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Product Management</h3>
+            <div class="pill-row">
+              <span class="pill">AI product strategy & roadmaps</span>
+              <span class="pill">Enterprise integrations (ITSM/ERP/CRM)</span>
+              <span class="pill">Observability & evals</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Business</h3>
+            <div class="pill-row">
+              <span class="pill">Cost optimization & unit economics</span>
+              <span class="pill">Stakeholder leadership & exec alignment</span>
+              <span class="pill">GTM strategy & launches</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>People Leadership</h3>
+            <div class="pill-row">
+              <span class="pill alt">Org leadership & coaching</span>
+              <span class="pill alt">Cross-functional collaboration</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Marketing</h3>
+            <div class="pill-row">
+              <span class="pill alt">Value proposition & messaging</span>
+              <span class="pill alt">Partner / ecosystem strategy</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>AI & Analytics</h3>
+            <div class="pill-row">
+              <span class="pill">Agentic AI & RAG (LangGraph/LangChain)</span>
+              <span class="pill">Solution Architecture (multi-cloud)</span>
+              <span class="pill">Security & compliance (SOC2, HIPAA, GDPR)</span>
+              <span class="pill">Multi-agent orchestration (n8n/workflows)</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Location</h3>
+            <p class="muted">Texas, USA</p>
+            <p class="muted" style="margin-top:.35rem;">This page is a public portfolio and summary of work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <h2>Leadership Experience</h2>
+          <p>Selected leadership roles across product, solutions, and coaching.</p>
+        </div>
+
+        <div class="card">
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Stealth (WorkflowsTech) — VP, Product Management</div>
+                <div class="muted">Workflows / orchestration platform (own product development)</div>
+              </div>
+              <div class="role-meta">2025–Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Leading end-to-end product development for a workflow orchestration platform focused on enterprise automation and measurable productivity gains.</li>
+              <li>Defined product vision, roadmap, and MVP scope; partnering with engineering/design on execution, usability, and adoption.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Maven (EduTech) — Agentic Leader & People Coach, Product Management</div>
+                <div class="muted">Cohort-based learning and 1:1 mentorship</div>
+              </div>
+              <div class="role-meta">2025–Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Coach product leaders on agentic AI product strategy, execution, and career growth through cohorts and 1:1 mentorship.</li>
+              <li>Provide people coaching and interview preparation (storytelling, impact framing, execution clarity) with structured feedback loops.</li>
+              <li>Guide PRDs, roadmaps, experimentation plans, and GTM narratives for AI-native products; strengthen stakeholder communication and decision-making.</li>
+              <li>Lead agentic PM workshops: problem definition, multi-agent workflow design, and evaluation metrics (quality, latency, cost).</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Google — Head of North America, Solutions and Products</div>
+                <div class="muted">Enterprise AI/ML and cloud solutions; platform adoption</div>
+              </div>
+              <div class="role-meta">2018–2025</div>
+            </div>
+            <ul class="bullets">
+              <li>Delivered $3B+ revenue impact through AI/ML and cloud solution strategy, executive alignment, and large-scale deployments.</li>
+              <li>Led 70+ cross-functional teams (engineering, sales, partners) to ship customer programs and product launches.</li>
+              <li>Owned architecture patterns, reference implementations, and operating rhythms for complex enterprise transformations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Top Products Led</h2>
+          <p>Cloud platforms and production-ready builds with explicit targets and measurable outcomes.</p>
+        </div>
+
+        <div class="grid cols-3">
+          <div class="card product">
+            <div class="label">Platform</div>
+            <h3>Google Vertex AI</h3>
+            <p class="muted">Enterprise AI platform leadership and adoption programs.</p>
+          </div>
+
+          <div class="card product">
+            <div class="label">Platform</div>
+            <h3>BigQuery ML</h3>
+            <p class="muted">Cloud analytics + ML enablement for enterprise teams.</p>
+          </div>
+
+          <div class="card product">
+            <div class="label">Open Source</div>
+            <h3>Enterprise Multi-Agent RAG System</h3>
+            <p class="muted">4-agent pipeline (router, retriever, synthesizer, fact-checker) targeting 10K+ queries/day, 92% accuracy, and &lt;3s latency.</p>
+          </div>
+
+          <div class="card product">
+            <div class="label">Open Source</div>
+            <h3>Agentic Workflow Automation Platform</h3>
+            <p class="muted">No-code multi-agent workflow builder; goal of 15 enterprise automations saving 200+ hours/week.</p>
+          </div>
+
+          <div class="card product">
+            <div class="label">Build</div>
+            <h3>Architecture Generator</h3>
+            <p class="muted">Production-ready architecture generation with targets for accuracy and unit economics.</p>
+          </div>
+
+          <div class="card">
+            <h3>Links</h3>
+            <p class="muted">Public work and code references:</p>
+            <div class="cta-row" style="justify-content:flex-start;">
+              <a class="btn" href="https://github.com/chandni-executive" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+              <a class="btn" href="https://linkedin.com/in/chansai" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header">
+          <h2>Education & Affiliations</h2>
+          <p>Formal training and professional community memberships.</p>
+        </div>
+
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Education</h3>
+            <ul class="bullets">
+              <li>MBA — Kelley School of Business, Indiana University</li>
+              <li>Master of Science — Northeastern University</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Affiliations</h3>
+            <ul class="bullets">
+              <li>Member, IEEE</li>
+            </ul>
+            <p class="muted" style="margin-top:.4rem;">Engineering and technology community membership.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (neutral, not "available for jobs") -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Connect</h2>
+          <p>For collaborations, speaking, community, or technical discussion—best channels below.</p>
+        </div>
+
+        <div class="card">
+          <div class="cta-row" style="justify-content:flex-start;">
+            <a class="btn primary" href="https://linkedin.com/in/chansai" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+            <a class="btn" href="https://github.com/chandni-executive" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+            <!-- Optional: add a portfolio link if/when you have it -->
+            <!-- <a class="btn" href="https://your-portfolio.com" target="_blank" rel="noopener noreferrer">🔗 Portfolio</a> -->
+          </div>
+          <p class="muted" style="margin-top:.8rem;">
+            Note: This page is intended as a public profile and portfolio, not a job solicitation.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot-left">
+        <strong>Chandni Sharma</strong>
+        <p>Product Management • Enterprise Architecture • Agentic AI Systems</p>
+      </div>
+
+      <div class="foot-right">
+        <div class="cta-row" style="justify-content:flex-end;">
+          <a class="btn" href="#skills">↑ Back to top</a>
+        </div>
+        <div class="muted" style="font-size:.9rem;">© <span id="year"></span> Chandni Sharma</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
